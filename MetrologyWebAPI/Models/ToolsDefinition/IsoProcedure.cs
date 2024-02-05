@@ -11,5 +11,6 @@ namespace MetrologyWebAPI.Models.ToolsDefinition
         public int MCode { get; set; }
         public string WordFileLink { get; set; }
         public string CertificateText { get; set; }
+        public string Description { get; set; }
     }
 }

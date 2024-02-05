@@ -13,7 +13,7 @@ namespace MetrologyWebAPI.Models.ToolsDefinition
         public int ValueMax { get; set; }
         public int ValueUnitID { get; set; }
         public int MCode { get; set; }
-        public int UncertaintyDelta { get; set; }
+        public double UncertaintyDelta { get; set; }
         public int UncertaintyUnitID { get; set; }
     }
 }

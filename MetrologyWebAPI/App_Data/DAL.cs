@@ -193,7 +193,7 @@ namespace MetrologyWebAPI.Data
                             }
                             else if (t.Columns[name].DataType.Name == "Decimal")
                             {
-                                // pis[i].SetValue(items[j], Convert.ToDouble(t.Rows[j][name]));
+                                pis[i].SetValue(items[j], Convert.ToDouble(t.Rows[j][name]));
                             }
                             else
                             {
