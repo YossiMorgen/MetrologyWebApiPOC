@@ -81,3 +81,17 @@ C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bi
 C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Web.Http.Cors.xml
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\NLog.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\NLog.xml
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\Dlls\Oracle.ManagedDataAccess.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\IgalDAL.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\Oracle.ManagedDataAccess.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\IgalDAL.pdb
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Text.Encodings.Web.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Text.Json.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.ValueTuple.dll
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Text.Encodings.Web.xml
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.Text.Json.xml
+C:\Users\ASUS\Desktop\fullStack\back_end\.net\MetrologyWebAPI\MetrologyWebAPI\bin\System.ValueTuple.xml

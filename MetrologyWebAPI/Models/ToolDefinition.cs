@@ -9,11 +9,7 @@ namespace MetrologyWebAPI.Models
     {
         public int ToolDefinitionID { get; set; }
         public int ToolLowLevelDefinitionID { get; set; }
-        public int MeasurementResolutionID { get; set; }
-        // public MeasurementResolution MeasurementResolution { get; set; }
-        public bool IsIso17025 { get; set; }
+        public int MeasurementResolutionSingleID { get; set; }
         public int TestTemplateID { get; set; }
-        // public TestTemplate TestTemplate { get; set; }
-
     }
 }

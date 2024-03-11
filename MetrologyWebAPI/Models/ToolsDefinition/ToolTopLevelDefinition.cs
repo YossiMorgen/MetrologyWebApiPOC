@@ -10,6 +10,6 @@ namespace MetrologyWebAPI.Models.ToolsDefinition
         public int ToolTopLevelDefinitionID { get; set; }
         public string ToolTopLevelDefinitionName { get; set; }
         public int SubTechID { get; set; }
-        public int IsoProcedureID { get; set; }
+        public int ValueUnitID { get; set; }
     }
 }

@@ -1,0 +1,15 @@
+2024-02-14 12:24:46.5165|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:24:53.5413|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:25:08.3820|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:25:14.2378|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:28:06.2154|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:28:18.5612|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:28:20.4520|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: fh
+2024-02-14 12:28:34.6324|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: hg
+2024-02-14 12:29:14.3054|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: hg
+2024-02-14 12:32:37.8397|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: mn
+2024-02-14 12:56:32.7074|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: חי
+2024-02-14 12:56:40.0542|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: חי
+2024-02-14 13:02:42.8888|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: עי
+2024-02-14 13:03:40.6206|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: עי
+2024-02-14 13:04:21.5534|INFO|MetrologyWebAPI.Controllers.TemplateController|TestTemplate: עי

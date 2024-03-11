@@ -12,5 +12,6 @@ namespace MetrologyWebAPI.Models.ToolsDefinition
         public string WordFileLink { get; set; }
         public string CertificateText { get; set; }
         public string Description { get; set; }
+        public int ToolTopLevelDefinitionID { get; set; }
     }
 }

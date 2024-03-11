@@ -1,3 +1,5 @@
+using NLog;
+using NLog.Targets;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,6 +8,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Text.Json;
 
 namespace MetrologyWebAPI.Data
 {
@@ -100,7 +103,7 @@ namespace MetrologyWebAPI.Data
 
         //private static readonly CacheItemPolicy policy = new CacheItemPolicy() { SlidingExpiration = TimeSpan.FromMinutes(5) };
         //private static readonly ObjectCache cache = MemoryCache.Default;
-        private static readonly string ConStr = ConfigurationManager.AppSettings["SqlConnectionString"];
+        public static readonly string ConStr = ConfigurationManager.AppSettings["SqlConnectionString"];
         public static Exception LastException { get; private set; }
 
 
@@ -270,8 +273,10 @@ namespace MetrologyWebAPI.Data
             catch (Exception ex)
             {
                 LastException = ex;
-                // Logger.error("DAL.select(" + cmd.CommandText + ")", ex);
-                return null;
+                //Logger.error("DAL.select(" + cmd.CommandText + ")", ex);
+                //return null;
+                throw ex;
+                
             }
         }
 
@@ -299,7 +304,7 @@ namespace MetrologyWebAPI.Data
                     //insertCommand.Parameters.AddWithValue("@TransactionNumber", transaction.TransactionNumber);
                     foreach (PropertyInfo pi in props)
                     {
-                        if (pi.Name.ToLower() == "id") { continue; }
+                        // if (pi.Name.ToLower() == "id") { continue; }
                         if (pi.Name.ToLower() == tableName.ToLower() + "id") { continue; }
                         if (pi.PropertyType.IsClass == true && pi.PropertyType != typeof(string)) { continue; }
                         if (pi.PropertyType.IsArray == true) { continue; }
@@ -357,6 +362,30 @@ namespace MetrologyWebAPI.Data
             }
         }
 
+        public static int insert(string cmdString)
+        {
+            try
+            {
+
+                using (var connection = new SqlConnection(ConStr))
+                {
+                    using (SqlCommand cmd = new SqlCommand(cmdString, connection))
+                    {
+                        connection.Open();
+                        // reurn the id of the inserted row
+                        return Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+
+                }
+            } 
+            catch (SqlException ex)
+            {
+                // raised if insert fails (or other reasons e. g. missing permission)
+                Console.WriteLine(ex.Message);
+                return -1;
+            }
+        }
+
 
         /*****************/
         /***** update ****/
@@ -405,7 +434,15 @@ namespace MetrologyWebAPI.Data
                         string value = pi.Name.ToLower();
                         string value2 = tableName.ToLower() + "id";
                         if (pi.PropertyType.IsClass == true && pi.PropertyType != typeof(string)) { continue; }
-                        if (pi.PropertyType == typeof(string) && Validators.maxString(pi.GetValue(data).ToString()) == false)
+                        if (pi.Name == "CovertOpsJsonTool")
+                        {
+                            object obj = pi.GetValue(data);
+                            string jsonString = JsonSerializer.Serialize(obj, new JsonSerializerOptions
+                            {
+                                WriteIndented = true // Optional: Makes the output JSON string more readable with indentation
+                            });
+                        }
+                        else if (pi.PropertyType == typeof(string) && Validators.maxString(pi.GetValue(data).ToString()) == false)
                         {
                             //ooohhhh injection
                             throw new OperationCanceledException("injections ohh yee:: " + pi.GetValue(data).ToString());
@@ -464,6 +501,27 @@ namespace MetrologyWebAPI.Data
                         return -1;
                     }
                 }
+            }
+        }
+
+        public static int Delete(string cmd)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConStr))
+                {
+                    using (SqlCommand _cmd = new SqlCommand(cmd, connection))
+                    {
+                        connection.Open();
+                        return _cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // raised if insert fails (or other reasons e. g. missing permission)
+                Console.WriteLine(ex.Message);
+                return -1;
             }
         }
     
